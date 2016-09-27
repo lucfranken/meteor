@@ -460,7 +460,7 @@ Previous builder: ${previousBuilder.outputPath}, this builder: ${outputPath}`
 
       this._ensureDirectory(relTo);
 
-      optimisticReaddir(absFrom).forEach(item => {
+      files.readdir(absFrom).forEach(item => {
         const thisAbsFrom = files.pathResolve(absFrom, item);
         const thisRelTo = files.pathJoin(relTo, item);
 
